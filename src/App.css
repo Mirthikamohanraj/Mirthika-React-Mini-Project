@@ -1,0 +1,611 @@
+/* ================================
+   MAIN PAGE
+================================ */
+
+.app {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 55px 60px 70px;
+
+  box-sizing: border-box;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(110, 150, 255, 0.25),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 90% 85%,
+      rgba(80, 220, 200, 0.25),
+      transparent 25%
+    ),
+    linear-gradient(
+      135deg,
+      #edf4ff 0%,
+      #fff1fb 50%,
+      #effffb 100%
+    );
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.header {
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+
+  margin-bottom: 55px;
+}
+
+.header h1 {
+  margin: 0;
+
+  font-size: clamp(42px, 5vw, 68px);
+  font-weight: 800;
+
+  letter-spacing: -2px;
+
+  color: #17235f;
+
+  text-shadow:
+    0 5px 15px rgba(40, 70, 160, 0.12);
+}
+
+.header h1 span {
+  color: #18a9dc;
+
+  font-size: 0.8em;
+
+  margin-right: 12px;
+}
+
+.header h1 strong {
+  background: linear-gradient(
+    90deg,
+    #e735a5,
+    #914eea
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header p {
+  margin-top: 10px;
+
+  font-size: 21px;
+
+  color: #5c6b91;
+}
+
+
+/* ================================
+   CARDS CONTAINER
+================================ */
+
+.cards-container {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 35px;
+
+  max-width: 1450px;
+
+  margin: 0 auto;
+}
+
+
+/* ================================
+   CARD
+================================ */
+
+.card {
+  position: relative;
+
+  min-height: 470px;
+
+  padding: 40px 30px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  background: rgba(255, 255, 255, 0.78);
+
+  backdrop-filter: blur(12px);
+
+  border: 2px solid rgba(255, 255, 255, 0.8);
+
+  box-shadow:
+    0 20px 45px rgba(60, 80, 150, 0.16);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+
+  box-shadow:
+    0 28px 55px rgba(60, 80, 150, 0.25);
+}
+
+
+/* ================================
+   CARD BORDERS
+================================ */
+
+.card.pink {
+  border-color: rgba(247, 110, 180, 0.55);
+}
+
+.card.blue {
+  border-color: rgba(90, 150, 255, 0.55);
+}
+
+.card.green {
+  border-color: rgba(60, 210, 190, 0.55);
+}
+
+
+/* ================================
+   CARD DECORATION
+================================ */
+
+.card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 170px;
+  height: 170px;
+
+  border-radius: 50%;
+
+  top: -65px;
+  left: -65px;
+
+  opacity: 0.45;
+}
+
+.card.pink::before {
+  background: #f5a9d0;
+}
+
+.card.blue::before {
+  background: #9ac5ff;
+}
+
+.card.green::before {
+  background: #9be9dd;
+}
+
+.card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 150px;
+  height: 150px;
+
+  border-radius: 50%;
+
+  bottom: -70px;
+  right: -60px;
+
+  opacity: 0.35;
+}
+
+.card.pink::after {
+  background: #f5a9d0;
+}
+
+.card.blue::after {
+  background: #9ac5ff;
+}
+
+.card.green::after {
+  background: #9be9dd;
+}
+
+
+/* ================================
+   ICON
+================================ */
+
+.icon-circle {
+  position: relative;
+  z-index: 2;
+
+  width: 135px;
+  height: 135px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 30px;
+
+  border-radius: 50%;
+
+  border: 6px solid rgba(255, 255, 255, 0.7);
+
+  box-shadow:
+    0 12px 30px rgba(80, 80, 150, 0.22);
+}
+
+.icon-circle span {
+  font-size: 62px;
+
+  filter:
+    drop-shadow(0 5px 5px rgba(0, 0, 0, 0.15));
+}
+
+
+/* Different icon colors */
+
+.pink .icon-circle {
+  background:
+    linear-gradient(
+      145deg,
+      #e83cff,
+      #8a24dc
+    );
+}
+
+.blue .icon-circle {
+  background:
+    linear-gradient(
+      145deg,
+      #24c9f5,
+      #1769df
+    );
+}
+
+.green .icon-circle {
+  background:
+    linear-gradient(
+      145deg,
+      #36d9c4,
+      #0db4a5
+    );
+}
+
+
+/* ================================
+   CARD TITLE
+================================ */
+
+.card h2 {
+  position: relative;
+  z-index: 2;
+
+  margin: 0 0 25px;
+
+  font-size: 27px;
+
+  line-height: 1.25;
+
+  color: #18265f;
+}
+
+
+/* ================================
+   STATUS
+================================ */
+
+.status {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-width: 155px;
+
+  padding: 12px 22px;
+
+  border-radius: 30px;
+
+  font-size: 19px;
+
+  font-weight: 700;
+
+  margin-bottom: 32px;
+
+  transition: 0.3s ease;
+}
+
+.status .heart {
+  font-size: 23px;
+}
+
+
+/* Liked */
+
+.status.liked {
+  background: #ffd8eb;
+
+  color: #ed3c91;
+}
+
+
+/* Not liked */
+
+.status.not-liked {
+  background: #e9edf4;
+
+  color: #687993;
+}
+
+
+/* ================================
+   LIKE BUTTON
+================================ */
+
+.like-button {
+  position: relative;
+  z-index: 2;
+
+  width: 82%;
+
+  max-width: 270px;
+
+  padding: 16px 25px;
+
+  border: none;
+
+  border-radius: 35px;
+
+  color: white;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.like-button span {
+  font-size: 22px;
+}
+
+.like-button:hover {
+  transform: scale(1.04);
+}
+
+.like-button:active {
+  transform: scale(0.97);
+}
+
+
+/* Pink */
+
+.pink .like-button {
+  background:
+    linear-gradient(
+      90deg,
+      #f33c91,
+      #ff2479
+    );
+
+  box-shadow:
+    0 12px 25px rgba(245, 50, 140, 0.28);
+}
+
+
+/* Blue */
+
+.blue .like-button {
+  background:
+    linear-gradient(
+      90deg,
+      #2868ef,
+      #8751ed
+    );
+
+  box-shadow:
+    0 12px 25px rgba(70, 90, 240, 0.28);
+}
+
+
+/* Green */
+
+.green .like-button {
+  background:
+    linear-gradient(
+      90deg,
+      #15bda8,
+      #09aeca
+    );
+
+  box-shadow:
+    0 12px 25px rgba(20, 190, 175, 0.28);
+}
+
+
+/* ================================
+   BACKGROUND DECORATIONS
+================================ */
+
+.decoration {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.decoration-one {
+  width: 320px;
+  height: 320px;
+
+  top: -170px;
+  left: -100px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #789df8,
+      #9a7df0
+    );
+
+  opacity: 0.65;
+}
+
+.decoration-two {
+  width: 300px;
+  height: 300px;
+
+  right: -150px;
+  bottom: -160px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #8cb8ff,
+      #75d9ce
+    );
+
+  opacity: 0.55;
+}
+
+
+/* ================================
+   DOT DECORATIONS
+================================ */
+
+.dots {
+  position: absolute;
+
+  z-index: 1;
+
+  color: #a98bf1;
+
+  font-size: 28px;
+
+  line-height: 0.6;
+
+  letter-spacing: 7px;
+
+  opacity: 0.55;
+}
+
+.dots-one {
+  top: 70px;
+  right: 45px;
+}
+
+.dots-two {
+  bottom: 50px;
+  left: 40px;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1000px) {
+  .app {
+    padding: 45px 30px 60px;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+
+    max-width: 600px;
+  }
+
+  .card {
+    min-height: 440px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .app {
+    padding: 35px 18px 50px;
+  }
+
+  .header h1 {
+    font-size: 38px;
+
+    letter-spacing: -1px;
+  }
+
+  .header p {
+    font-size: 17px;
+  }
+
+  .cards-container {
+    gap: 25px;
+  }
+
+  .card {
+    min-height: 420px;
+
+    padding: 35px 20px;
+  }
+
+  .icon-circle {
+    width: 115px;
+    height: 115px;
+  }
+
+  .icon-circle span {
+    font-size: 52px;
+  }
+
+  .card h2 {
+    font-size: 24px;
+  }
+
+  .like-button {
+    width: 90%;
+  }
+}
